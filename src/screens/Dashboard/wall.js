@@ -1,10 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, Image, TextInput, Dimensions, ScrollView, TouchableOpacity } from 'react-native';
-import WallListItem from '../../components/WallListItem'
 import i from '../../common/i'
-import { JOBLISTING, CATEGORIES, SERVICELISTING } from '../../common/staticdata'
-import LottieScreen from '../../components/Lottie';
-import api from "../../service/api";
+import { CATEGORIES, SERVICELISTING } from '../../common/staticdata'
+
 import Header from '../../components/Header';
 import { images } from '../../common/images';
 import { colors } from '../../common/colors';

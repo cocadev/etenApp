@@ -11,10 +11,12 @@ import Wall from './screens/Dashboard/wall';
 
 import WallDetail from './screens/Dashboard/wallDetail';
 import Profile from './screens/Dashboard/Profile';
-import Inbox from './screens/Dashboard/Inbox';
 import {StoreProfile} from './screens/Dashboard/storeProfile'
 import { WorkingHours } from './screens/Dashboard/workingHours'
 import { StoreManagers } from './screens/Dashboard/storeManagers'
+import { Default } from './screens/Dashboard/default'
+import { BankDetails } from './screens/Dashboard/bankDetails'
+import { AddStripeAccount } from './screens/Dashboard/addStripeAccount'
 
 const width = Dimensions.get('window').width
 
@@ -79,15 +81,18 @@ export default class App extends PureComponent {
                 drawerWidth={width/1.2}
                 drawerPosition="left"
               >
+                {/* <Scene key="bb" component={Default} hideNavBar/> */}
+                <Scene key="addstripe" component={AddStripeAccount} hideNavBar/>
+                <Scene key="bank" component={BankDetails} hideNavBar/>
+
                 <Scene key="workingHours" component={WorkingHours} hideNavBar/>
                 <Scene key="storeProfile" component={StoreProfile} hideNavBar/>
                 <Scene key="storeManagers" component={StoreManagers} hideNavBar/>
                 <Scene key="offers" component={StoreManagers} hideNavBar/>
+                <Scene key="profile" component={Profile} initial={false} hideNavBar/>
 
                 <Scene key="wall" component={Wall} hideNavBar/>
-                <Scene key="profile" component={Profile} initial={false} hideNavBar/>
                 <Scene key="walldetail" component={WallDetail} initial={false} hideNavBar/>
-                <Scene key="inbox" component={Inbox} initial={false} hideNavBar/>
 
               </Drawer>
             </Scene>

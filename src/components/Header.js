@@ -49,7 +49,7 @@ export default class Header extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.view}>
-          <Text style={styles.head}>{title? title : 'Rythand'}</Text>
+          <Text style={styles.head}>{title? title : ''}</Text>
           <TouchableOpacity style={{ position: 'absolute', left: 15 }} onPress={() => Actions.drawerOpen()}>
             <Image source={images.icon_menu} style={{ width: 20, height: 18 }} />
           </TouchableOpacity>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: "row",
     backgroundColor: '#111',
-
+    elevation: 5
   },
   head: {
     fontSize: 18,
