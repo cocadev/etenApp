@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import { colors } from '../../common/colors';
 import MaterialTabs from 'react-native-material-tabs';
 
-export function WorkingHours() {
+export function Home() {
 
     const [selectedTab, setSelectedTab] = useState(0);
 
@@ -15,10 +15,10 @@ export function WorkingHours() {
 
     return (
         <View style={i.container}>
-            <Header title={'Working Hours'} />
+            <Header title={'Home'} />
 
             <MaterialTabs
-                items={['Active', 'Expired', 'Deleted']}
+                items={['New', 'Accepted', 'Deleted']}
                 selectedIndex={selectedTab}
                 onChange={(e) => setSelectedTab(e)}
                 barColor={colors.WHITE}
@@ -28,11 +28,7 @@ export function WorkingHours() {
             />
 
             <View style={styles.content}>
-                <View style={styles.btnGroup}>
-                    <TouchableOpacity style={i.btn}>
-                        <Text style={{ color: '#fff' }}>Add</Text>
-                    </TouchableOpacity>
-                </View>
+
                 <TextInput
                     style={i.textinput}
                     placeholder={'Search'}

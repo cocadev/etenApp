@@ -31,6 +31,8 @@
     "react-native-app-intro-slider": "^2.0.1",
     "react-native-appearance": "~0.3.3",
     "react-native-banner-carousel": "^1.0.3",
+    "react-native-calendar-picker": "^7.0.6",
+    "react-native-calendars": "^1.1128.0",
     "react-native-checkbox-heaven": "^0.1.6",
     "react-native-drawer": "^2.5.1",
     "react-native-gesture-handler": "~1.8.0",

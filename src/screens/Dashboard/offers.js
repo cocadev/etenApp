@@ -61,8 +61,8 @@ export function Offers() {
 
 }
 
-const Item = ({ item }) => (
-    <View style={styles.item}>
+const Item = ({ item, key }) => (
+    <View style={styles.item} key={key}>
         <View style={styles.row}>
             <Text style={i.normalText}>{'SL NO'}</Text>
             <Text style={i.normalText}>{item.id}</Text>

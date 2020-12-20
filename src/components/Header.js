@@ -1,60 +1,28 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, TouchableHighlight, StyleSheet, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import { Ionicons } from '@expo/vector-icons';
+import { Feather, FontAwesome } from '@expo/vector-icons'; 
 import { images } from '../common/images';
 import Popover, { Rect, Size } from 'react-native-popover-view';
 import { colors } from '../common/colors'
 
 export default class Header extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false,
-      isVisible1: false,
-      isVisible2: false,
-      isVisible3: false
-    }
-  }
-
-  showPopover1() {
-    this.setState({ isVisible1: true });
-  }
-
-  closePopover1() {
-    this.setState({ isVisible1: false });
-  }
-
-  showPopover2() {
-    this.setState({ isVisible2: true });
-  }
-
-  closePopover2() {
-    this.setState({ isVisible2: false });
-  }
-
-  showPopover3() {
-    this.setState({ isVisible3: true });
-  }
-
-  closePopover3() {
-    this.setState({ isVisible3: false });
-  }
-
-
   render() {
-    const { title, search } = this.props;
+    const { title, rightE } = this.props;
 
     return (
       <View style={styles.container}>
         <View style={styles.view}>
           <Text style={styles.head}>{title? title : ''}</Text>
           <TouchableOpacity style={{ position: 'absolute', left: 15 }} onPress={() => Actions.drawerOpen()}>
-            <Image source={images.icon_menu} style={{ width: 20, height: 18 }} />
+            <Feather name="menu" size={24} color="black" />
           </TouchableOpacity>
-
-          {search}
+          <View style={{ position: 'absolute', right: 15 }}>
+            {rightE}
+          </View>
+          
+          
           
         </View>
       </View>

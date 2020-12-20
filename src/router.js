@@ -14,9 +14,13 @@ import Profile from './screens/Dashboard/Profile';
 import {StoreProfile} from './screens/Dashboard/storeProfile'
 import { WorkingHours } from './screens/Dashboard/workingHours'
 import { StoreManagers } from './screens/Dashboard/storeManagers'
-import { Default } from './screens/Dashboard/default'
+// import { Default } from './screens/Dashboard/default'
 import { BankDetails } from './screens/Dashboard/bankDetails'
 import { AddStripeAccount } from './screens/Dashboard/addStripeAccount'
+import { ChangeLanguage } from './screens/Dashboard/changeLanguage'
+import { History } from './screens/Dashboard/history'
+import { SelectTwoDates } from './screens/Dashboard/selectTwoDates'
+import { Home } from './screens/Dashboard/home'
 
 const width = Dimensions.get('window').width
 
@@ -82,6 +86,10 @@ export default class App extends PureComponent {
                 drawerPosition="left"
               >
                 {/* <Scene key="bb" component={Default} hideNavBar/> */}
+                <Scene key="home" component={Home} hideNavBar/>
+                <Scene key="selectTwoDates" component={SelectTwoDates} hideNavBar/>
+                <Scene key="history" component={History} hideNavBar/>
+                <Scene key="language" component={ChangeLanguage} hideNavBar/>
                 <Scene key="addstripe" component={AddStripeAccount} hideNavBar/>
                 <Scene key="bank" component={BankDetails} hideNavBar/>
 

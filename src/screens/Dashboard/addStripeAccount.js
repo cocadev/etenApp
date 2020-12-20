@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 import { colors } from '../../common/colors';
 import i from '../../common/i'
 import Header from '../../components/Header';
+import { MaterialIcons } from '@expo/vector-icons'; 
 
 export function AddStripeAccount() {
 
@@ -12,22 +13,38 @@ export function AddStripeAccount() {
         <View style={i.container}>
             <Header title={'Add Stripe Account'} />
 
-            <View style={{ backgroundColor: '#f0f0f0', flex: 1}}>
+            <ScrollView style={{ padding: 12}}>
 
-                <View style={styles.card}>
-                    <Text style={i.smallText}>{'STEP 1: CONNECT ATO YOUR STRIPE ACCOUNT'}</Text>
-                    <TouchableOpacity style={styles.btn}>
-                        <Text style={i.normalText}>Connect stripe account</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={i.labelText}>Photo ID*</Text>
+                <MaterialIcons name="photo-filter" size={64} color="black" />
 
-                <View style={styles.card}>
-                    <Text style={i.smallText}>{'STEP 2: LINK BANK ACCOUNT'}</Text>
-                    <TouchableOpacity style={styles.btn}>
-                        <Text style={i.normalText}>Link bank account</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+               <Text style={i.labelText}>First Name*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>Last Name*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>Date of Birth*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>SSN*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>Address*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>City*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>State*</Text>
+               <TextInput style={i.textinput} />
+
+               <Text style={i.labelText}>Zip Code*</Text>
+               <TextInput style={i.textinput} />
+               
+               <View style={{height: 20}}/>
+
+            </ScrollView>
 
         </View>
     );

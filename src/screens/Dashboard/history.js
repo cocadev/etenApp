@@ -3,9 +3,9 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'r
 import i from '../../common/i';
 import Header from '../../components/Header';
 import { colors } from '../../common/colors';
-import MaterialTabs from 'react-native-material-tabs';
+import { FontAwesome } from '@expo/vector-icons'; 
 
-export function WorkingHours() {
+export function History() {
 
     const [selectedTab, setSelectedTab] = useState(0);
 
@@ -15,24 +15,13 @@ export function WorkingHours() {
 
     return (
         <View style={i.container}>
-            <Header title={'Working Hours'} />
-
-            <MaterialTabs
-                items={['Active', 'Expired', 'Deleted']}
-                selectedIndex={selectedTab}
-                onChange={(e) => setSelectedTab(e)}
-                barColor={colors.WHITE}
-                indicatorColor={colors.GREEN}
-                activeTextColor={colors.DARK}
-                inactiveTextColor={colors.GREY3}
-            />
+            <Header title={'History'} rightE={(<TouchableOpacity>
+            <FontAwesome name="filter" size={24} color="black" />
+          </TouchableOpacity>)}
+          />
 
             <View style={styles.content}>
-                <View style={styles.btnGroup}>
-                    <TouchableOpacity style={i.btn}>
-                        <Text style={{ color: '#fff' }}>Add</Text>
-                    </TouchableOpacity>
-                </View>
+            
                 <TextInput
                     style={i.textinput}
                     placeholder={'Search'}

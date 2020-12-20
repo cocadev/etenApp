@@ -14,12 +14,13 @@ export default{
         paddingVertical:p(4)
     },
     textinput:{
-        height: p(36),
+        height: 36,
         borderColor: colors.GREY2,
-        borderRadius: p(5),
+        borderRadius: 5,
         borderWidth: 1,
-        paddingLeft: p(10),
-        fontSize:p(18)
+        paddingLeft: 10,
+        fontSize:15,
+        marginTop: 1
     },
     indicatorContainer: {
         flex: 1,
@@ -41,13 +42,19 @@ export default{
     },
     smallText:{
         fontFamily:'Montserrat-Medium',
-        fontSize:p(10),
+        fontSize:11,
         color:colors.DARK2
+    },
+    labelText:{
+        fontFamily:'Montserrat-Medium',
+        fontSize:11,
+        color:colors.DARK2,
+        marginTop: 12,
     },
     normalText:{
         color: colors.DARK, 
         fontFamily: 'Montserrat-Medium', 
-        fontSize: p(13)
+        fontSize: 13
     },
     btn: {
         backgroundColor: colors.GREEN,
